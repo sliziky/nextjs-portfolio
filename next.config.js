@@ -10,3 +10,5 @@ module.exports = {
       return cfg;
   }
 }
+// const withCSS = require('@zeit/next-css')
+// module.exports = withCSS({/* my next config */})
