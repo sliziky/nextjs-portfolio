@@ -2,8 +2,10 @@ import Head  from "next/head"
 import { Component } from 'react'
 import { attributes, react as HomeContent } from '../content/home.md';
 import * as React from 'react';
+
 export const Home : React.FC = () => {
   let { title, cats } = attributes;
+  console.log(title, cats);
   return (
     <>
       <Head>
@@ -13,7 +15,7 @@ export const Home : React.FC = () => {
         <h1>{title}</h1>
         <HomeContent />
         <ul>
-          {cats.map((cat, k) => (
+          {(cats as any[]).map((cat, k) => (
             <li key={k}>
               <h2>{cat.name}</h2>
               <p>{cat.description}</p>
